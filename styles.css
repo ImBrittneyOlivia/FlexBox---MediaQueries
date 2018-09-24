@@ -1,0 +1,15 @@
+body {
+  margin: 0;
+  display: flex;
+}
+#side-nav {
+  width: 300px;
+  background-color: purple;
+  height: 100vh;
+  position: fixed;
+}
+#content {
+  margin-left: 300px;
+  flex: 1;
+  padding: 0 1em;
+}
