@@ -13,3 +13,37 @@ body {
   flex: 1;
   padding: 0 1em;
 }
+h1,
+p {
+  font-weight: 300; /*weight or thickness of the font*/
+  font-family: sans-serif;
+}
+
+/*media query syntax when screen is less than 600px than apply these styles listed below-------- 
+
+You can also combine queries. Lets say we wanted the side nav to be at the top when the orientation of the window is portrait--meaning
+when the window is less than 600px it will be at the top but when it is not in portrait mode it will go back tot he side.-----*/
+@media (max-width: 600px) and (orientation: portrait) {
+  body {
+    display: block;
+  }
+  #side-nav {
+    width: 100vw; /* 100 percent of the screen width wise*/
+    height: 100px;
+    position: static; /* default */
+  }
+  #content {
+    margin-left: 0;
+  }
+}
+
+/*You can also have multiple media queries, so if we wanted the side nav to be wider when the screen is full we can make a new media query and set min
+width to 400px*/
+@media (min-width: 1000px) and (orientation: landscape) {
+  #side-nav {
+    width: 400px; /* 100 percent of the screen width wise*/
+  }
+  #content {
+    margin-left: 400;
+  }
+}
